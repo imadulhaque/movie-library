@@ -1,0 +1,15 @@
+<a [routerLink]="['/movie', title]">
+  <md-card>
+    <md-card-title-group>
+      <img md-card-sm-image *ngIf="poster" [src]="poster"/>
+      <md-card-title>{{ title }}</md-card-title>
+      <md-card-subtitle *ngIf="year">{{ year }}</md-card-subtitle>
+    </md-card-title-group>
+    <md-card-content>
+      <p *ngIf="genre">{{ genre }}</p>
+    </md-card-content>
+    <md-card-footer>
+      <app-movie-actors [movie]="movie"></app-movie-actors>
+    </md-card-footer>
+  </md-card>
+</a>

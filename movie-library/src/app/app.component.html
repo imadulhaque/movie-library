@@ -1,0 +1,11 @@
+<div>
+<md-sidenav-container>
+  <md-toolbar color="primary">
+    <span [routerLink]="['/home']">Movie Library</span>
+    <span class="app-toolbar-filler"></span>
+    <button md-button class="theme-button">TOGGLE DARK THEME</button>
+  </md-toolbar>
+  <router-outlet></router-outlet>
+</md-sidenav-container>
+  <a [routerLink]="['/add']" md-fab mat-tooltip="Add new movie" class="fab-bottom-right"><md-icon>add</md-icon></a>
+</div>

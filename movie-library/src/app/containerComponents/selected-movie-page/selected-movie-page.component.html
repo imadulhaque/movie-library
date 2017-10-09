@@ -1,0 +1,6 @@
+<app-movie-editor
+  [movie]="movie$ | async"
+  [inCollection]="isSelectedMovieInCollection$ | async"
+  (add)="addToCollection($event)"
+  (remove)="removeFromCollection($event)">
+</app-movie-editor>

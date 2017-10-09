@@ -1,0 +1,2 @@
+<app-movie-search [query]="searchQuery$ | async" [searching]="loading$ | async" (search)="search($event)"></app-movie-search>
+<app-movie-preview-list [movies]="movies$ | async" [query]="searchQuery$ | async"></app-movie-preview-list>

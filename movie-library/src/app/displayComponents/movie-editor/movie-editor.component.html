@@ -1,0 +1,46 @@
+<md-card>
+  <md-card-header >
+    <button class="left-align" md-raised-button color="primary" (click)="enableForm()" *ngIf="inCollection"><i class="material-icons">edit</i></button>
+  </md-card-header>
+  <md-card-content>
+  <form [formGroup]="movieForm" (ngSubmit)="save($event)" >
+
+    <md-input-container >
+      <input mdInput formControlName="title" placeholder="Title" [disabled]="!isEdit"/>
+    </md-input-container>
+    <md-error *ngIf="movieForm.controls.title.errors">Title is required!</md-error>
+
+    <md-input-container>
+      <input mdInput formControlName="year" placeholder="Year" [disabled]="!isEdit"/>
+    </md-input-container>
+    <md-error *ngIf="movieForm.controls.year.errors">Year is required!</md-error>
+
+    <md-input-container>
+      <input mdInput formControlName="genre" placeholder="Genre" [disabled]="!isEdit"/>
+    </md-input-container>
+    <md-error *ngIf="movieForm.controls.genre.errors">Genre is required!</md-error>
+
+    <md-input-container class="poster-input">
+      <input mdInput formControlName="poster" placeholder="Poster" [disabled]="!isEdit"/>
+    </md-input-container>
+    <!--img tag makes card to appear in a weired way and messes up all the layout and style
+    so removing poster-->
+    <!--<md-input-container class="poster-input">-->
+    <!--<img src="http://placehold.it/350x150" class="md-card-image" alt="Movie poster"/>-->
+    <!--</md-input-container>-->
+
+    <md-input-container class="custom-form-input">
+      <input mdInput formControlName="actors" placeholder="Actors" [disabled]="!isEdit"/>
+    </md-input-container>
+    <md-card-actions align="end">
+      <button type="submit" md-raised-button color="primary" *ngIf="!inCollection" [disabled]="!movieForm.valid">Save</button>
+      <button type="submit" md-raised-button color="primary" *ngIf="inCollection && !isEdit" [disabled]="!movieForm.valid">Delete</button>
+      <button type="submit" md-raised-button color="primary" *ngIf="inCollection && isEdit" [disabled]="!movieForm.valid">Save</button>
+      <button type="submit" md-raised-button color="primary" [disabled]="!movieForm.valid" (click)="cancel()">Cancel</button>
+    </md-card-actions>
+  </form>
+  </md-card-content>
+
+
+
+</md-card>
