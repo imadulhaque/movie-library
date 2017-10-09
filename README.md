@@ -1,5 +1,4 @@
 # movie-library
-Movie Library
  
 Tools and frameworks used:
 1.	Angular-cli1.0.0
