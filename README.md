@@ -8,6 +8,7 @@ Tools and frameworks used:
 5.	json-server
 6.	Typescript 2.2.2
 7.	NgStore 2.2.2
+
 Instructions to start application
 1.	After downloading application, go to its directory in command prompt and run ‘npm install’ command to install all packages.
 2.	Run command npm install -g json-server to install json-server.
