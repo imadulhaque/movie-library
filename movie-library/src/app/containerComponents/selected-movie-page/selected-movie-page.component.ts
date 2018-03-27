@@ -8,7 +8,7 @@ import * as movieActions from '../../store/actions/movieActions';
 @Component({
   selector: 'app-selected-movie-page',
   templateUrl: './selected-movie-page.component.html',
-  styleUrls: ['./selected-movie-page.component.css']
+  styleUrls: []
 })
 export class SelectedMoviePageComponent implements OnInit {
   movie$: Observable<Movie>;
