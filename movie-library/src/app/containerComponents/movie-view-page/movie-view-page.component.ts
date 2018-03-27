@@ -11,7 +11,7 @@ import {Movie} from "../../models/movie";
 @Component({
   selector: 'app-movie-view-page',
   templateUrl: './movie-view-page.component.html',
-  styleUrls: ['./movie-view-page.component.css']
+  styleUrls: []
 })
 export class MovieViewPageComponent implements OnInit {
   actionsSubscription: Subscription;
