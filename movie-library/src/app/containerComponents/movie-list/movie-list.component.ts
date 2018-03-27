@@ -8,7 +8,7 @@ import * as movieActions from '../../store/actions/movieActions';
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
+  styleUrls: []
 })
 export class MovieListComponent implements OnInit {
   movies$: Observable<Movie[]>;
